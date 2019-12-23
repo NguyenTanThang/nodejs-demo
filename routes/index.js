@@ -36,6 +36,7 @@ router.post("/login", (req, res) => {
             res.setHeader("auth-token", token);
             return res.json({
                 token,
+                user_id: existUser._id,
                 msg: "Logged in",
                 msg_type: "success"
             })

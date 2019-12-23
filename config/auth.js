@@ -12,7 +12,8 @@ const validateToken = (req, res, next) => {
     }
 
     try {
-        const decoded = jwt.verify(token, JWT_SECRET);
+        jwt.verify(token, JWT_SECRET);
+        const decoded = jwt.decode(token);
         res.setHeader("user_id", decoded.id);
         next();
     } catch (error) {
