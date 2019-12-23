@@ -74,8 +74,8 @@ router.post("/signup", (req, res) => {
         .then(createdUser => {
             return res.json({
                 createdUser,
-                msg: "The user is already existed",
-                msg_type: "danger"
+                msg: "Successfully created a new user",
+                msg_type: "success"
             })
         })
     })
